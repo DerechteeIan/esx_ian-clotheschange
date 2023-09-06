@@ -2,7 +2,7 @@ Config = {}
 
 -- ESX-Version --
 Config.ESX11 = true -- If you're esx version is higher than 1.1 change this to false
-Config.EnableArmor = true -- If enabled you get armor when you use the item
+Config.EnableArmor = false -- If enabled you get armor when you use the item
 
 
 Config.Clothes = {
