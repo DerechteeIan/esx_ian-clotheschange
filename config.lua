@@ -40,8 +40,8 @@ Config.Clothes = {
     }
 },
 
-
-changeme = {
+-- The itemname has to be the same as in the Server.lua
+itemname = {
     male = {
         ['tshirt_1'] = 1,  ['tshirt_2'] = 0,
         ['torso_1'] = 0,   ['torso_2'] = 0,
