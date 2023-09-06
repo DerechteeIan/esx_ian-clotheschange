@@ -14,7 +14,11 @@ end
 local clotheson = false
 RegisterNetEvent('ian-clotheschange:changeclothes')
 AddEventHandler('ian-clotheschange:changeclothes', function (item)
+    local playerPed = PlayerPedId()
     if clotheson == false then
+        if Config.EnableArmor == true then
+            SetPedArmour(playerPed, 100)
+        end
         TriggerEvent('skinchanger:getSkin', function(skin)
         clotheson = true
     if skin.sex == 0 then
@@ -24,6 +28,9 @@ AddEventHandler('ian-clotheschange:changeclothes', function (item)
     end
 end)
     else
+        if Config.EnableArmor == true then
+            SetPedArmour(playerPed, 0)
+        end
         clotheson = false
         ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin)
         TriggerEvent('skinchanger:loadSkin', skin)
